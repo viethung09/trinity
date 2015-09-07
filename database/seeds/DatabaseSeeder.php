@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
@@ -21,6 +22,7 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         $this->call(UserTableSeeder::class);
+        $this->call(RolesTableSeeder::class);
 
         Model::reguard();
     }
