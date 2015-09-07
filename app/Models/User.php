@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Settings;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
@@ -40,5 +41,10 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      *
      * @var array
      */
-//    protected $casts = ['settings' => 'json'];
+    protected $casts = ['settings' => 'json'];
+
+    public function settings()
+    {
+        return new Settings($this->settings, $this);
+    }
 }
