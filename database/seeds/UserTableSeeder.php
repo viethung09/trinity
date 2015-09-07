@@ -29,7 +29,25 @@ class UserTableSeeder extends Seeder
                 'opt_in_quarterly'  => false,
                 'opt_in_yearly'  => true
             ]
-
+        ]);
+        User::create([
+            'first_name' => 'John',
+            'last_name' => 'Doe',
+            'email' => 'johnDoe@gmail.com',
+            'password' => bcrypt('123456'),
+            'username' => 'John Doe',
+            'username_slug' => 'john-doe',
+            'comfirmation_code' => md5(microtime() + env('APP_KEY')),
+            'comfirmed' => 1,
+            'settings' => [
+                'gender' => 'Male',
+                'mobile'   => '555 755 83 98',
+                'nationality'  => 'EN',
+                'home_page'  => 'none',
+                'opt_in_monthly'  => false,
+                'opt_in_quarterly'  => false,
+                'opt_in_yearly'  => true
+            ]
         ]);
     }
 }

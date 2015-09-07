@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         DB::statement('SET FOREIGN_KEY_CHECKS=0');
         User::truncate();
+        Role::truncate();
 
         DB::statement('SET FOREIGN_KEY_CHECKS=1');
         Model::unguard();
