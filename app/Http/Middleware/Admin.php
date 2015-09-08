@@ -31,11 +31,11 @@ class Admin
     {
         if($this->auth->check()) {
             $admin = 0;
-            if($this->auth->user()->admin === 1) {
+            if($this->auth->user()->admin === '1') {
                 $admin = 1;
             }
 
-            if($admin === 0) {
+            if($admin === '0') {
                 return $this->response->redirectTo('/'); // Go to frontend side
             }
             return $next($request);

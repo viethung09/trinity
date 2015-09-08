@@ -29,7 +29,8 @@ class UserTableSeeder extends Seeder
                 'opt_in_monthly'  => false,
                 'opt_in_quarterly'  => false,
                 'opt_in_yearly'  => true
-            ]
+            ],
+            'admin' => 1
         ]);
         User::create([
             'first_name' => 'John',
@@ -48,7 +49,8 @@ class UserTableSeeder extends Seeder
                 'opt_in_monthly'  => false,
                 'opt_in_quarterly'  => false,
                 'opt_in_yearly'  => true
-            ]
+            ],
+            'admin' => 0
         ]);
     }
 }
