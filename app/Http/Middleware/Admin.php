@@ -3,9 +3,23 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Auth\Guard;
+use Illuminate\Routing\ResponseFactory;
+
+use App\Models\AssignedRole;
 
 class Admin
 {
+    protected $auth;
+
+    protected $response;
+
+    function __construct(Guard $auth, ResponseFactory $response)
+    {
+        $this->auth = $auth;
+        $this->response = $response;
+    }
+
     /**
      * Handle an incoming request.
      *
@@ -15,6 +29,17 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
+        if($this->auth->check()) {
+            $admin = 0;
+            if($this->auth->user()->admin === 1) {
+                $admin = 1;
+            }
+
+            if($admin === 0) {
+                return $this->response->redirectTo('/'); // Go to frontend side
+            }
+            return $next($request);
+        }
+        return $this->response->redirectTo('/'); // Go to frontend
     }
 }
