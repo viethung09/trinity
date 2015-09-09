@@ -1,7 +1,11 @@
 <?php
 
+Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin'], function() {
 
-Route::get('home', 'HomeController@index');
+    Route::pattern('id', '[0-9]+');
+    Route::get('dashboard', 'DashboardController@index');
+    Route::get('pages', 'PagesController@index');
+});
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
@@ -17,13 +21,8 @@ Route::controllers([
     'password' => 'Auth\PasswordController'
 ]);
 
-Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin'], function() {
-
-    Route::pattern('id', '[0-9]+');
-    Route::get('dashboard', 'DashboardController@index');
-});
-
-
+Route::get('home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
 
 
 
