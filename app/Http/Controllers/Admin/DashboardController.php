@@ -22,7 +22,7 @@ class DashboardController extends AdminController
      */
     public function index()
     {
-        return "Admin panel here!" . \Auth::user();
+        return view('admin.index');
     }
 
 
