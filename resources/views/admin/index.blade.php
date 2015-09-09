@@ -1,7 +1,11 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Hung
- * Date: 9/9/15
- * Time: 10:59 AM
- */
+@extends('admin.layouts.master')
+
+@section('content')
+
+@endsection
+
+@section('css')
+@endsection
+
+@section('js')
+@endsection
