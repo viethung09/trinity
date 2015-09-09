@@ -1,10 +1,17 @@
 <?php
 
+Route::get('home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
+
+
 Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin'], function() {
 
     Route::pattern('id', '[0-9]+');
     Route::get('dashboard', 'DashboardController@index');
     Route::get('pages', 'PagesController@index');
+
+    Route::get('{name?}', 'TrinityController@showView');
+
 });
 
 // Authentication routes...
@@ -21,8 +28,7 @@ Route::controllers([
     'password' => 'Auth\PasswordController'
 ]);
 
-Route::get('home', 'HomeController@index');
-Route::get('/', 'HomeController@index');
+
 
 
 
