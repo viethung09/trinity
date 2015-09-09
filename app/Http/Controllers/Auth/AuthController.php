@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Contracts\Auth\Registrar;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -23,14 +25,17 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
+
     protected $redirectTo = '/home';
 
     /**
      * Create a new authentication controller instance.
-     *
+     * @param Guard $auth
+     * @param Registrar $registrar
      */
     public function __construct()
     {
+
         $this->middleware('guest', ['except' => 'getLogout']);
     }
 
