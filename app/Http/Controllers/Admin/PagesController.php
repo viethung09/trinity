@@ -14,7 +14,7 @@ class PagesController extends AdminController
     {
         parent::__construct();
     }
-    
+
     /**
      * Display a listing of the resource.
      *
