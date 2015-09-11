@@ -238,16 +238,22 @@
                     <a href=""><i class="fa fa-dashboard fa-fw"></i> Dashboard<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="">Add Role</a>
+                            <a href="{{ url('admin/roles/addrole') }}">Add Role</a>
                         </li>
                         <li>
-                            <a href="">List Role</a>
+                            <a href="{{ url('admin/roles/listroles') }}">List Roles</a>
                         </li>
                         <li>
                             <a href="">Admin Settings</a>
                         </li>
                         <li>
                             <a href="">System settings</a>
+                        </li>
+                        <li>
+                            <a href="">Add Admin</a>
+                        </li>
+                        <li>
+                            <a href="">List Admins</a>
                         </li>
                     </ul>
                 </li>
@@ -264,73 +270,28 @@
                     <!-- /.nav-second-level -->
                 </li>
                 <li>
-                    <a href=""><i class="fa fa-table fa-fw"></i> Tables</a>
-                </li>
-                <li>
-                    <a href=""><i class="fa fa-edit fa-fw"></i> Forms</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                    <a href=""><i class="fa fa-table fa-fw"></i> Pages<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="">Panels and Wells</a>
+                            <a href="{{ url('admin/pages/addpage') }}">Add Page</a>
                         </li>
                         <li>
-                            <a href="buttons.html">Buttons</a>
-                        </li>
-                        <li>
-                            <a href="notifications.html">Notifications</a>
-                        </li>
-                        <li>
-                            <a href="typography.html">Typography</a>
-                        </li>
-                        <li>
-                            <a href="icons.html"> Icons</a>
-                        </li>
-                        <li>
-                            <a href="grid.html">Grid</a>
+                            <a href="{{ url('admin/pages/listpage') }}">List Page</a>
                         </li>
                     </ul>
-                    <!-- /.nav-second-level -->
                 </li>
+
                 <li>
-                    <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                    <a href="#"><i class="fa fa-wrench fa-fw"></i> Categories<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="#">Second Level Item</a>
+                            <a href="">Add Category</a>
                         </li>
                         <li>
-                            <a href="#">Second Level Item</a>
+                            <a href="">List Categories</a>
                         </li>
                         <li>
-                            <a href="#">Third Level <span class="fa arrow"></span></a>
-                            <ul class="nav nav-third-level">
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-                                <li>
-                                    <a href="#">Third Level Item</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-third-level -->
-                        </li>
-                    </ul>
-                    <!-- /.nav-second-level -->
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
-                    <ul class="nav nav-second-level">
-                        <li>
-                            <a href="">Blank Page</a>
-                        </li>
-                        <li>
-                            <a href="{{'/auth/login'}}">Login Page</a>
+                            <a href="">Delete Category</a>
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->

@@ -22,7 +22,7 @@ class TrinityController extends AdminController
      */
     public function showView($name = null)
     {
-        if(view()->exists('/admin'.$name))
+        if(view()->exists('admin/'.$name))
         {
            if(Auth::check())
            {
