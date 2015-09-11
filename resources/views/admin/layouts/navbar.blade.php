@@ -261,10 +261,10 @@
                     <a href=""><i class="fa fa-bar-chart-o fa-fw"></i> Users<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="">Add User</a>
+                            <a href="{{ url('admin/users/adduser') }}">Add User</a>
                         </li>
                         <li>
-                            <a href="">List User</a>
+                            <a href="{{ url('admin/users/listuser') }}">List User</a>
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->
