@@ -285,13 +285,10 @@
                     <a href="#"><i class="fa fa-wrench fa-fw"></i> Categories<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="">Add Category</a>
+                            <a href="{{ url('admin/categories/addcategory') }}">Add Category</a>
                         </li>
                         <li>
-                            <a href="">List Categories</a>
-                        </li>
-                        <li>
-                            <a href="">Delete Category</a>
+                            <a href="{{ url('admin/categories/listcategories') }}">List Categories</a>
                         </li>
                     </ul>
                     <!-- /.nav-second-level -->
