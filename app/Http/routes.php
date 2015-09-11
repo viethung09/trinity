@@ -12,6 +12,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 
     Route::get('{name?}', 'TrinityController@showView');
 
+    Route::group(['prefix' => 'pages'], function () {
+        Route::get('{name?}', 'TrinityController@showView');
+    });
+
 });
 
 // Authentication routes...

@@ -31,7 +31,16 @@ class TrinityController extends AdminController
            return redirect('auth/login')->withErrors('error', 'You must be logged in.');
         }
 
-        return view('admin.404');
+        if(view()->exists('admin/pages/'. $name))
+        {
+            if(Auth::check())
+            {
+                return view('admin/pages/'. $name);
+            }
+            return redirect('auth/login')->withErrors('error', 'You must be logged in.');
+        }
+
+        return view('admin.errors.404');
         
     }
 }

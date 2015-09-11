@@ -1,5 +1,2 @@
-@extends('admin.layouts.master')
 
-@section('content')
-    <h1>List Pages</h1>
-@endsection
+    <h1 class="alert-danger">List Pages</h1>

@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{'/admin/dashboard'}}">Trinity Backend</a>
+        {{--<a class="navbar-brand" href="{{'/admin/dashboard'}}">Trinity Backend</a>--}}
     </div>
     <!-- /.navbar-header -->
 
@@ -273,10 +273,10 @@
                     <a href=""><i class="fa fa-table fa-fw"></i> Pages<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
-                            <a href="{{ url('admin/pages/addpage') }}">Add Page</a>
+                            <a href="#" class="add-page">Add Page</a>
                         </li>
                         <li>
-                            <a href="{{ url('admin/pages/listpage') }}">List Page</a>
+                            <a href="#" class="list-page">List Page</a>
                         </li>
                     </ul>
                 </li>

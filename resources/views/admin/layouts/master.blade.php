@@ -144,7 +144,12 @@
             </div>
         </div>
         <!-- /.row -->
+        <div class="row">
+            @yield('content')
+            <div class="col-lg-6">
 
+            </div>
+        </div>
         <!-- /.row -->
     </div>
     <!-- /#page-wrapper -->
@@ -168,6 +173,33 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="{{ asset('dist/js/sb-admin-2.js') }}"></script>
+
+<script>
+    var rootPath = 'http://trinity.dev/';
+    $(document).ready(function() {
+        $('.add-page').on('click', function() {
+            $.ajax({
+                url: rootPath + 'admin/pages/addpage',
+                type: "GET", // not POST, laravel won't allow it
+                success: function (data) {
+                    $data = $(data); // the HTML content your controller has produced
+                    $('.col-lg-6').html($data).fadeIn();
+                }
+            });
+        });
+
+        $('.list-page').on('click', function() {
+            $.ajax({
+                url: rootPath + 'admin/pages/listpages',
+                type: "GET", // not POST, laravel won't allow it
+                success: function (data) {
+                    $data = $(data); // the HTML content your controller has produced
+                    $('.col-lg-6').html($data).fadeIn();
+                }
+            });
+        });
+    });
+</script>
 
 </body>
 
