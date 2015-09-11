@@ -244,21 +244,21 @@
                             <a href="{{ url('admin/roles/listroles') }}">List Roles</a>
                         </li>
                         <li>
-                            <a href="">Admin Settings</a>
+                            <a href="{{ url('admin/admins/settings') }}">Admin Settings</a>
                         </li>
                         <li>
-                            <a href="">System settings</a>
+                            <a href="{{ url('admin/system/settings') }}">System/Website settings</a>
                         </li>
                         <li>
-                            <a href="">Add Admin</a>
+                            <a href="{{ url('admin/admins/addadmin') }}">Add Admin</a>
                         </li>
                         <li>
-                            <a href="">List Admins</a>
+                            <a href="{{ url('admin/admins/listadmin') }}">List Admins</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Users<span class="fa arrow"></span></a>
+                    <a href=""><i class="fa fa-bar-chart-o fa-fw"></i> Users<span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li>
                             <a href="">Add User</a>
